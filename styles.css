@@ -13,19 +13,19 @@ body{
 .landing-page{
     color: #fff;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     background: url(./images/montreal.jpg) center center / cover;
 }
 
-/* --HEADER-- */
+/* -- HEADER -- */
 
 header{
     display: flex;
     padding: 1rem;
     height: 5rem;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid #fff;
@@ -69,9 +69,82 @@ header li a:hover{
    color: #FFDC33;
 }
 
+/* -- FRONT PAGE -- */
+.intro-container{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
 
+.content{
+    width: 55rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
+.content h1{
+    font-size: 3rem;
+}
 
-.landing-page p{
-    color: #fff;
+.content p{
+    margin-top: 25px;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.content span{
+    color: #FFDC33;
+    font-weight: 400;
+}
+
+/* -- OFFERS -- */
+
+.offers{
+    background-color: #efefef;
+    display: flex;
+    width: 100%;
+}
+
+.container{
+    margin: 10vh 15vw;
+    height: 470px;
+    
+}
+
+.container h1{
+    font-weight: 300;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+}
+
+.houses{
+    display: flex;
+    margin: 1rem;
+    
+}
+
+.house-elem{
+    
+    text-align: center;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 2rem;
+    margin: 0 1vw;
+}
+
+.house-elem p{
+margin: 1rem;
+}
+
+.separator{
+    border: 1px solid black;
+    width: 50px;
+    margin-left: 85px;
+}
+
+.house-elem img{
+    width: 100%;
 }
