@@ -32,6 +32,12 @@ body{
     margin: 0 auto;
 }
 
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img{
     max-width: 100%;
 }
@@ -41,20 +47,43 @@ span{
     font-weight: 400;
 }
 
+h2{
+    font-weight: 300;
+}
+
 .dark{
     background-color: #333;
 }
 
-/* --Hero Page-- */
+@media(max-width: 1080px){
+    .landing-page{
+        height: auto;
+        padding: 0 0 50px 0;
+    }
+    .houses,.about-flex{
+        flex-direction: column;
+    }
+    .house-elem,.about-flex img,.about-text{
+        width: 100% !important;
+        margin: 25px 0;
+    }
 
-.hero-page{
-    color: #fff;
-    height: 100vh;
-    background: url(./images/montreal.jpg) center center / cover;
-}
+    .about-flex{
+        width: 80%;
+        margin: 25px 10%;
+    }
 
-h2{
-    font-weight: 300;
+    .about-flex img,.about-text{
+        margin: 0;
+    }
+
+    .about-text{
+        padding: 35px!important;
+    }
+    .review:nth-of-type(even){
+        flex-direction: column;
+        padding-left: 10px;
+    }
 }
 
 /* --Header-- */
@@ -108,13 +137,17 @@ header li a:hover{
    color: var(--second-color);
 }
 
-/* -------FIRST PAGE--------*/
+/* --Hero Page-- */
+
+.hero-page{
+    color: #fff;
+    height: 100vh;
+    background: url(./images/montreal.jpg) center center / cover;
+}
+
 
 .hero-container{
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    height: 100%; 
 }
 
 .content h1{
@@ -132,7 +165,7 @@ header li a:hover{
     font-weight: 300;
 }
 
-/* -----OFFERS------ */ 
+/* --Offers-- */ 
 
 .offers{
     padding: 100px 0;
@@ -148,38 +181,6 @@ header li a:hover{
     display: flex;
     justify-content: space-around;
 }
-
-@media(max-width: 1080px){
-    .landing-page{
-        height: auto;
-        padding: 0 0 50px 0;
-    }
-    .houses,.about-flex{
-        flex-direction: column;
-    }
-    .house-elem,.about-flex img,.about-text{
-        width: 100% !important;
-        margin: 25px 0;
-    }
-
-    .about-flex{
-        width: 80%;
-        margin: 25px 10%;
-    }
-
-    .about-flex img,.about-text{
-        margin: 0;
-    }
-
-    .about-text{
-        padding: 35px!important;
-    }
-    .review:nth-of-type(even){
-        flex-direction: column;
-        padding-left: 10px;
-    }
-}
-
 
 .house-elem {
     display: flex;
@@ -206,7 +207,7 @@ header li a:hover{
     margin: 1rem;
 }
 
-/* ------ABOUT -------*/
+/* --About--*/
 
 .about{
     height: auto;
@@ -216,12 +217,11 @@ header li a:hover{
 .about-flex{
     display: flex;
 }
+
 .about-text{
     width: 55%;
     padding: 0 4rem;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     color: #fff;
     line-height: 2rem;
 }
@@ -238,28 +238,23 @@ header li a:hover{
     margin-bottom:3rem;
 }
 
-/* ----- REVIEW -----*/
+/* --Reviews--*/
 
 .reviews{
   padding: 100px 0;
 }
 
 .reviews-box{
-    display: block;
     margin: auto;
     max-width:800px ;
 }
 
 
 .review{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.5rem;
     border-radius: 5px;
-    height: 22%;
     background-color: #fff;
     margin: 2rem 0;
 }
@@ -290,28 +285,21 @@ header li a:hover{
     max-width: 50px;
 }
 
-/* ----- CONTACT -----*/
-
+/* --Contact--*/
 
 .contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 600px;
+    color: #fff;
+    padding: 100px 0;
 }
 
 .contact-box{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    color: #fff;
-    width: 60%;
-    margin: auto;
+   width: 50%;
+   max-width: 600px;
 }
 
-
-
+.contact-box h2{
+    padding: 40px 0;
+}
 
 .contact-box input{
     height: 80px;
@@ -334,7 +322,7 @@ header li a:hover{
 }
 
 .form-control textarea{
-    color: #fff;
+    color: #999;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #444;
@@ -352,6 +340,12 @@ header li a:hover{
     outline: 0;
 }
 
+.btn-flex{
+    padding: 50px 0;
+    width: 100%;
+}
+
+
 .btn{
     cursor: pointer;
     font-size: 1rem;
@@ -361,7 +355,7 @@ header li a:hover{
     padding: 15px;
     border-radius: 17px;
     border: 0;
-    align-self: center;
+    
 }
 
 .btn:active{
@@ -369,7 +363,7 @@ header li a:hover{
 }
 
 
-/* ----FOOTER---- */
+/* --Footer-- */
 .footer{
     text-align: center;
     padding: 25px 0;
