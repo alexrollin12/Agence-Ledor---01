@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --second-color:#ffdc35;
+}
+
 body{
     font-family: 'Montserrat',sans-serif;
     background-color: #efefef;
@@ -15,6 +19,10 @@ body{
     color: #fff;
     height: 100vh;
     background: url(./images/montreal.jpg) center center / cover;
+}
+
+.dark{
+    background-color: #333;
 }
 
 /* -- HEADER -- */
@@ -39,7 +47,7 @@ header h1{
 header h1 i{
     margin-right: .5rem;
     font-size: 1.5rem;
-    color: #FFDC33;
+    color: var(--second-color);
 }
 
 header h1 a{
@@ -65,7 +73,7 @@ header li a{
 }
 
 header li a:hover{
-   color: #FFDC33;
+   color: var(--second-color);
 }
 
 /* -------FIRST PAGE--------*/
@@ -93,7 +101,7 @@ header li a:hover{
 }
 
 span{
-    color: #FFDC33;
+    color: var(--second-color);
     font-weight: 400;
 }
 
@@ -103,7 +111,6 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    
     height: 800px;
     padding: 3rem;
 }
@@ -131,9 +138,8 @@ span{
     text-align: center;
     border: 1px solid #dedede;
     background-color: #fff;
-    font-weight: 400;
     line-height: 2rem;
-    margin-right: 1vw;
+    margin-right: 1rem;
 }
 
 .house-elem img{
@@ -154,15 +160,13 @@ span{
 
 .about{
     height: 500px;
-   
     display: flex;
     flex-direction: row;
 }
 
 .about-img{
     background: url(./images/team.jpg) center center / cover;
-   
-    width: 200%;
+    width: 175%;
 }
 
 .about-text{
@@ -171,8 +175,7 @@ span{
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background-color: #333;
-    
+    line-height: 2rem;
 }
 
 .about-text h2{
@@ -184,7 +187,6 @@ span{
     height: 800px;
     display: flex;
     justify-content: center;
-    
 }
 
 .reviews-box{
@@ -201,7 +203,6 @@ span{
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.5rem;
-    
     border-radius: 5px;
     display: flex;
     height: 22%;
@@ -226,11 +227,14 @@ span{
 .profile{
     display: block;
     width: 25%;
-    padding-top: 20px;
-    
+    padding: 20px;
 }
 
-.profile p{
+.profile h5{
+    font-size: .8rem;
+}
+
+.profile em{
     font-size: .7rem;
     margin: 0;
     padding: 0;
@@ -244,23 +248,33 @@ span{
 
 
 .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 600px;
-    background-color: #333;
 }
 
 .contact-box{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
     color: #fff;
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
 
 
+.contact-box input{
+    height: 80px;
+    font-size: 1rem;
+}
 
-
-
-
+.contact-box textarea{
+    padding-top: 20px;
+    height: 60px;
+}
 
 
 
@@ -297,13 +311,14 @@ span{
 
 .btn{
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    background-color: #FFDC33;
+    background-color: var(--second-color);
     padding: 15px;
     border-radius: 17px;
     border: 0;
+    align-self: center;
 }
 
 .btn:active{
@@ -316,11 +331,6 @@ span{
     align-items: center;
     height: 6rem;
     background-color: #444;
-    color: #fff;
+    color: #efefef;
     width:100%;
 }
-
-.footer h4{
-    font-weight: 300;
-}
-
