@@ -10,6 +10,11 @@
     --second-color:#ffdc35;
 }
 
+::placeholder{
+    color: #999;
+    padding-left: 10px;
+}
+
 body{
     font-family: 'Montserrat',sans-serif;
     background-color: #efefef;
@@ -17,6 +22,7 @@ body{
 
 img{
     width: 100%;
+    height: 100%;
 }
 
 .landing-page{
@@ -27,6 +33,10 @@ img{
 
 .dark{
     background-color: #333;
+}
+
+h2{
+    font-weight: 300;
 }
 
 /* -- HEADER -- */
@@ -163,15 +173,13 @@ span{
 /* ------ABOUT -------*/
 
 .about{
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: row;
 }
 
-.about-img{
-    background: url(./images/team.jpg) center center / cover;
-    width: 175%;
-}
+
+
 
 .about-text{
     padding: 0 4rem;
@@ -180,6 +188,12 @@ span{
     justify-content: center;
     color: #fff;
     line-height: 2rem;
+    flex: 1;
+    
+}
+
+.about-img{
+    flex: 1;
 }
 
 .about-text h2{
@@ -187,51 +201,45 @@ span{
 }
 
 /* ----- REVIEW -----*/
+
 .reviews{
-    height: 800px;
+    height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .reviews-box{
+   padding: 5rem 0;
+    width: 50%;
     display: block;
-    height: 100%;
-    width: 60%;
-}
-
-.reviews-box h2{
-    margin: 4rem 0;
 }
 
 .review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.5rem;
     border-radius: 5px;
-    display: flex;
     height: 22%;
     background-color: #fff;
     margin: 2rem 0;
 }
 
 .review-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
+    padding:2rem;
 }
-
 
 .review:nth-of-type(even){
     flex-direction: row-reverse;
     padding-left: 10px;
 }
 
-
 .profile{
-    display: block;
     width: 25%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .profile h5{
@@ -240,8 +248,6 @@ span{
 
 .profile em{
     font-size: .7rem;
-    margin: 0;
-    padding: 0;
 }
 .profile img{
     border-radius: 50%;
@@ -270,6 +276,7 @@ span{
 
 
 
+
 .contact-box input{
     height: 80px;
     font-size: 1rem;
@@ -278,13 +285,14 @@ span{
 .contact-box textarea{
     padding-top: 20px;
     height: 60px;
+    font-size: 1rem;
 }
 
 
 
 
 .form-control input{
-    color: #fff;
+    color: #999;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #444;
@@ -328,6 +336,8 @@ span{
 .btn:active{
     transform: scale(0.95);
 }
+
+
 
 .footer{
     display: flex;
