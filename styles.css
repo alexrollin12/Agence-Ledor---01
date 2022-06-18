@@ -10,26 +10,54 @@
     --second-color:#ffdc35;
 }
 
+::placeholder{
+    color: #999;
+    padding-left: 10px;
+}
+
 body{
     font-family: 'Montserrat',sans-serif;
     background-color: #efefef;
 }
 
-img{
+.container{
+    display: block;
     width: 100%;
 }
 
-.landing-page{
-    color: #fff;
-    height: 100vh;
-    background: url(./images/montreal.jpg) center center / cover;
+.wrapper{
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+span{
+    color: var(--second-color);
+    font-weight: 400;
 }
 
 .dark{
     background-color: #333;
 }
 
-/* -- HEADER -- */
+/* --Hero Page-- */
+
+.hero-page{
+    color: #fff;
+    height: 100vh;
+    background: url(./images/montreal.jpg) center center / cover;
+}
+
+h2{
+    font-weight: 300;
+}
+
+/* --Header-- */
 
 header{
     background-color: rgba(0, 0, 0, 0.3);
@@ -82,7 +110,7 @@ header li a:hover{
 
 /* -------FIRST PAGE--------*/
 
-.intro-container{
+.hero-container{
     display: flex;
     height: 100%;
     justify-content: center;
@@ -104,24 +132,10 @@ header li a:hover{
     font-weight: 300;
 }
 
-span{
-    color: var(--second-color);
-    font-weight: 400;
-}
-
 /* -----OFFERS------ */ 
 
 .offers{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    padding: 3rem;
-}
-
-.container{
-    height: 80%;
-    width: 80%;
+    padding: 100px 0;
 }
 
 .container h1{
@@ -132,18 +146,50 @@ span{
 
 .houses{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
+@media(max-width: 1080px){
+    .landing-page{
+        height: auto;
+        padding: 0 0 50px 0;
+    }
+    .houses,.about-flex{
+        flex-direction: column;
+    }
+    .house-elem,.about-flex img,.about-text{
+        width: 100% !important;
+        margin: 25px 0;
+    }
+
+    .about-flex{
+        width: 80%;
+        margin: 25px 10%;
+    }
+
+    .about-flex img,.about-text{
+        margin: 0;
+    }
+
+    .about-text{
+        padding: 35px!important;
+    }
+    .review:nth-of-type(even){
+        flex-direction: column;
+        padding-left: 10px;
+    }
+}
+
+
 .house-elem {
+    display: flex;
+    flex-flow: column wrap;
     width: 30%;
     text-align: center;
     border: 1px solid #dedede;
     background-color: #fff;
     line-height: 2rem;
-    margin-right: 1rem;
+
 }
 
 .house-elem img{
@@ -163,17 +209,15 @@ span{
 /* ------ABOUT -------*/
 
 .about{
-    height: 500px;
+    height: auto;
+    display: block;
+}
+
+.about-flex{
     display: flex;
-    flex-direction: row;
 }
-
-.about-img{
-    background: url(./images/team.jpg) center center / cover;
-    width: 175%;
-}
-
 .about-text{
+    width: 55%;
     padding: 0 4rem;
     display: flex;
     flex-direction: column;
@@ -182,56 +226,56 @@ span{
     line-height: 2rem;
 }
 
+
+.about-flex img{
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .about-text h2{
     margin-bottom:3rem;
 }
 
 /* ----- REVIEW -----*/
+
 .reviews{
-    height: 800px;
-    display: flex;
-    justify-content: center;
+  padding: 100px 0;
 }
 
 .reviews-box{
     display: block;
-    height: 100%;
-    width: 60%;
+    margin: auto;
+    max-width:800px ;
 }
 
-.reviews-box h2{
-    margin: 4rem 0;
-}
 
 .review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: .8rem;
     font-weight: 300;
     line-height: 1.5rem;
     border-radius: 5px;
-    display: flex;
     height: 22%;
     background-color: #fff;
     margin: 2rem 0;
 }
 
 .review-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 50px;
+    padding:2rem;
 }
-
 
 .review:nth-of-type(even){
     flex-direction: row-reverse;
     padding-left: 10px;
 }
 
-
 .profile{
-    display: block;
     width: 25%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .profile h5{
@@ -240,8 +284,6 @@ span{
 
 .profile em{
     font-size: .7rem;
-    margin: 0;
-    padding: 0;
 }
 .profile img{
     border-radius: 50%;
@@ -270,6 +312,7 @@ span{
 
 
 
+
 .contact-box input{
     height: 80px;
     font-size: 1rem;
@@ -278,13 +321,11 @@ span{
 .contact-box textarea{
     padding-top: 20px;
     height: 60px;
+    font-size: 1rem;
 }
 
-
-
-
 .form-control input{
-    color: #fff;
+    color: #999;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #444;
@@ -301,13 +342,11 @@ span{
     width: 100%;
 }
 
-
-
-
 .form-control input:focus,
 .form-control input:valid{
     outline: 0;
 }
+
 .form-control textarea:focus,
 .form-control textarea:valid{
     outline: 0;
@@ -329,12 +368,11 @@ span{
     transform: scale(0.95);
 }
 
+
+/* ----FOOTER---- */
 .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;
+    text-align: center;
+    padding: 25px 0;
     background-color: #444;
     color: #efefef;
-    width:100%;
 }
