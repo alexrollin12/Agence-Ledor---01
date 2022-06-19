@@ -1,40 +1,76 @@
+/*Ipad Landscape*/
+@media (max-width: 1181px) {
+   
+.about h2{
+    padding-top: 25px;
+    font-size:1.5rem;
+    }
+    .about p{
+    font-size:1rem;
+    padding-bottom: 25px;
+    }
+}
 
-@media(max-width: 1080px){
+/*Ipad*/
+@media(max-width: 1000px){
+
     .about-flex{
         flex-direction: column-reverse;
     }
+
     .about-flex img,.about-text{
         width: 100% !important;
     }
+
     .about-text{
         padding: 100px;
     }
-
+    
     .houses{
         flex-flow: row wrap;
     }
+    
     .house-elem{
         width: 45%;
         margin-bottom: 15px;
     }
 }
 
-@media(max-width: 800px){
+/*Iphone*/
+@media(max-width: 750px){
     .landing-page{
         height: auto;
-        padding: 0 0 50px 0;
+        padding: 15px 50px;
+    }
+
+    h2{
+        font-size: 1.7rem !important;
+    }
+
+    header, header ul{
+        font-size: .8rem;
+    }
+
+    header li a{
+        padding:1px;
+    }
+
+    header h1 a{
+        font-size: 2rem;
     }
 
     .content h1,.content p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .offers h1{
         font-size: 1.5rem;
     }
+
     .houses{
         flex-direction: column;
     }
+
     .house-elem,.about-flex img,.about-text{
         width: 100% !important;
         margin: 25px 0;
@@ -59,6 +95,5 @@
     .contact-box{
         width: 80% !important;
     }
-    
 }
 

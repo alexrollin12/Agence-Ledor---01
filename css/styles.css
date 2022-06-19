@@ -25,6 +25,16 @@ a, a:hover, a:focus, a:active, a:visited {
     color: inherit;
 }
 
+input:focus,
+input:valid{
+    outline: 0;
+}
+
+textarea:focus,
+textarea:valid{
+    outline: 0;
+}
+
 img{
     max-width: 100%;
 }
@@ -175,7 +185,6 @@ header li a:hover{
     display: flex;
 }
 
-
 .about-text{
     width: 55%;
     padding: 0 4rem;
@@ -236,6 +245,7 @@ header li a:hover{
 .profile em{
     font-size: .7rem;
 }
+
 .profile img{
     border-radius: 50%;
     max-width: 50px;
@@ -286,16 +296,7 @@ header li a:hover{
     width: 100%;
 }
 
-.form-control input:focus,
-.form-control input:valid{
-    outline: 0;
-}
-
-.form-control textarea:focus,
-.form-control textarea:valid{
-    outline: 0;
-}
-
+/* --Button--*/
 .btn-flex{
     padding: 50px 0;
     width: 100%;
@@ -319,6 +320,7 @@ header li a:hover{
 /* --Footer-- */
 
 .footer{
+    display: flex;
     text-align: center;
     padding: 25px 0;
     background-color: #444;
