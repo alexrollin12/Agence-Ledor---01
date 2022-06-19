@@ -20,6 +20,24 @@ body{
     background-color: #efefef;
 }
 
+a, a:hover, a:focus, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+span{
+    color: var(--second-color);
+    font-weight: 400;
+}
+
+h2{
+    font-weight: 300;
+}
+
 .container{
     display: block;
     width: 100%;
@@ -38,52 +56,8 @@ body{
     align-items: center;
 }
 
-img{
-    max-width: 100%;
-}
-
-span{
-    color: var(--second-color);
-    font-weight: 400;
-}
-
-h2{
-    font-weight: 300;
-}
-
 .dark{
     background-color: #333;
-}
-
-@media(max-width: 1080px){
-    .landing-page{
-        height: auto;
-        padding: 0 0 50px 0;
-    }
-    .houses,.about-flex{
-        flex-direction: column;
-    }
-    .house-elem,.about-flex img,.about-text{
-        width: 100% !important;
-        margin: 25px 0;
-    }
-
-    .about-flex{
-        width: 80%;
-        margin: 25px 10%;
-    }
-
-    .about-flex img,.about-text{
-        margin: 0;
-    }
-
-    .about-text{
-        padding: 35px!important;
-    }
-    .review:nth-of-type(even){
-        flex-direction: column;
-        padding-left: 10px;
-    }
 }
 
 /* --Header-- */
@@ -93,11 +67,9 @@ header{
     display: flex;
     padding: 1rem;
     height: 5rem;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.5px solid #fff;
-    color: #fff;
+    border-bottom: 0.5px solid #999;
 }
 
 header h1{
@@ -113,23 +85,16 @@ header h1 i{
 
 header h1 a{
     font-size: 3rem;
-    font-family:'Long Cang',cursive;
-    text-decoration: none;
-    color: #fff;
+    font-family:'Long Cang';
 }
 
 header ul{
     display: flex;
-    flex-flow: row nowrap ;
+    flex-flow: row;
     list-style-type: none;
 }
 
-nav a:visited{
-    color: #fff;
-}
-
 header li a{
-    text-decoration: none;
     padding: 1.1rem;
 }
 
@@ -142,9 +107,8 @@ header li a:hover{
 .hero-page{
     color: #fff;
     height: 100vh;
-    background: url(./images/montreal.jpg) center center / cover;
+    background: url(../images/montreal.jpg) center center / cover;
 }
-
 
 .hero-container{
     height: 100%; 
@@ -171,8 +135,7 @@ header li a:hover{
     padding: 100px 0;
 }
 
-.container h1{
-    font-weight: 300;
+.container h2{
     margin-bottom: 4rem;
     font-size: 2.5rem;
 }
@@ -184,30 +147,24 @@ header li a:hover{
 
 .house-elem {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     width: 30%;
     text-align: center;
     border: 1px solid #dedede;
     background-color: #fff;
     line-height: 2rem;
-
-}
-
-.house-elem img{
-    width: 100%;
 }
 
 .separator{
     border: 1px solid black;
-    width: 25%;
-    margin: 0 35%;
+    width: 30%;
 }
 
 .house-elem p{
     margin: 1rem;
 }
 
-/* --About--*/
+/* --About-- */
 
 .about{
     height: auto;
@@ -217,6 +174,7 @@ header li a:hover{
 .about-flex{
     display: flex;
 }
+
 
 .about-text{
     width: 55%;
@@ -228,7 +186,7 @@ header li a:hover{
 
 .about-flex img{
     width: 45%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
 }
@@ -237,7 +195,7 @@ header li a:hover{
     margin-bottom:3rem;
 }
 
-/* --Reviews--*/
+/* --Reviews-- */
 
 .reviews{
   padding: 100px 0;
@@ -267,7 +225,7 @@ header li a:hover{
 }
 
 .profile{
-    width: 25%;
+    width: 30%;
     padding: 10px;
 }
 
@@ -359,6 +317,7 @@ header li a:hover{
 }
 
 /* --Footer-- */
+
 .footer{
     text-align: center;
     padding: 25px 0;

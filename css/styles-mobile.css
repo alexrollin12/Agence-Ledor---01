@@ -1,0 +1,64 @@
+
+@media(max-width: 1080px){
+    .about-flex{
+        flex-direction: column-reverse;
+    }
+    .about-flex img,.about-text{
+        width: 100% !important;
+    }
+    .about-text{
+        padding: 100px;
+    }
+
+    .houses{
+        flex-flow: row wrap;
+    }
+    .house-elem{
+        width: 45%;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 800px){
+    .landing-page{
+        height: auto;
+        padding: 0 0 50px 0;
+    }
+
+    .content h1,.content p{
+        font-size: 1.5rem;
+    }
+
+    .offers h1{
+        font-size: 1.5rem;
+    }
+    .houses{
+        flex-direction: column;
+    }
+    .house-elem,.about-flex img,.about-text{
+        width: 100% !important;
+        margin: 25px 0;
+    }
+    
+    .about-flex img,.about-text{
+        margin: 0;
+    }
+
+    .about-text{
+        padding: 35px!important;
+    }
+
+    .review{
+        flex-direction: column;
+    }
+
+    .review:nth-of-type(even){
+        flex-direction: column;
+    }
+
+    .contact-box{
+        width: 80% !important;
+    }
+    
+}
+
